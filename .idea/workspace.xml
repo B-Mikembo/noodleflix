@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/2-dev-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/2-dev-deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/rules/entity/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/ReplaceCamelCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/UnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -48,16 +56,39 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.MoviesFetcherTest.executor": "Run",
     "Maven.backend [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "push-dev-latest-version-to-docker",
+    "git-widget-placeholder": "get-all-movies",
+    "last_directory_selection": "/Users/bricemikembo/Desktop/noodleflix/backend/src/main/java/fr/github/brice/movies",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="fr.github.brice.movies.business.rules.entity" />
+      <recent name="fr.github.brice.movies.business.rules.usecase" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration name="MoviesFetcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.github.brice.movies.business.rules.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.github.brice.movies.business.rules.usecase" />
+      <option name="MAIN_CLASS_NAME" value="fr.github.brice.movies.business.rules.usecase.MoviesFetcherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="noodleflix" />
       <method v="2">
@@ -69,6 +100,11 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MoviesFetcherTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
