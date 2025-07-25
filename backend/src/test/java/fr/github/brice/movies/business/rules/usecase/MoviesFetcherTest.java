@@ -13,17 +13,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MoviesFetcherTest {
 
     private MoviesFetcherContext context;
-    private MoviesFetcher moviesFetcher;
 
     @BeforeEach
     void setUp() {
         context = new MoviesFetcherContext();
-        moviesFetcher = context.buildUseCase();
     }
 
     @Test
     void shouldReturnEmptyMoviesWhenFetchAllMovies() {
         context.withNoMovies();
+        var moviesFetcher = context.buildUseCase();
 
         var movies = moviesFetcher.fetchMovies();
 
@@ -32,6 +31,7 @@ public class MoviesFetcherTest {
 
     @Test
     void shouldReturnMoviesWhenFetchAllMovies() {
+        var moviesFetcher = context.buildUseCase();
 
         var movies = moviesFetcher.fetchMovies();
 
