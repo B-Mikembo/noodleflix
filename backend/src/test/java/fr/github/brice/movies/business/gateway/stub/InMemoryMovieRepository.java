@@ -20,4 +20,8 @@ public class InMemoryMovieRepository implements MovieRepository {
     public List<Movie> findAll() {
         return entities.values().stream().toList();
     }
+
+    public void removeAll() {
+        entities.clear();
+    }
 }
