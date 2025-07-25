@@ -10,10 +10,15 @@ import static fr.github.brice.movies.business.rules.MovieAssertions.assertThat;
 @DisplayName("Movie test")
 class MovieTest {
     @Test
-    void shouldReturnTitleWhenCreateMovieInstance() {
-        var movie = new Movie("Dragons");
+    void shouldReturnAllInformationWhenCreateMovieInstance() {
+        var movie = new Movie(1,"Dragons", 0.81, "https://dragons.com", "11/06/2025", "FR");
 
         assertThat(movie)
-                .hasTitle("Dragons");
+                .hasId(1)
+                .hasTitle("Dragons")
+                .hasVoteAverage(0.81)
+                .hasPosterPath("https://dragons.com")
+                .hasReleaseDate("11/06/2025")
+                .hasOriginalLanguage("FR");
     }
 }

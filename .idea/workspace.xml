@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/MovieAssert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/MovieAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/entity/MovieTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/gateway/MovieRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/gateway/stub/InMemoryMovieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/NoodleflixApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/NoodleflixApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/controller/BackendController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/rules/entity/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/rules/entity/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/MovieAssert.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/MovieAssert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/entity/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/entity/MovieTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcherTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +25,7 @@
         <option value="AnnotationType" />
         <option value="Record" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -43,6 +45,11 @@
     &quot;accountId&quot;: &quot;7e127ecc-ced7-492e-b547-7acd1751c344&quot;
   }
 }</component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="MovieTest" />
+    </enabled-run-configurations>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -57,6 +64,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.MovieTest.executor": "Run",
     "JUnit.MoviesFetcherTest.executor": "Run",
     "Maven.backend [package].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -66,12 +74,13 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "get-all-movies",
-    "last_directory_selection": "/Users/bricemikembo/Desktop/noodleflix/backend/src/main/java/fr/github/brice/movies",
+    "last_directory_selection": "/Users/bricemikembo/Desktop/noodleflix/backend/src/main/java/fr/github/brice/movies/business/rules/usecase",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="fr.github.brice.movies.business.gateway" />
       <recent name="fr.github.brice.movies.business.rules" />
       <recent name="fr.github.brice.movies.business.rules.entity" />
       <recent name="fr.github.brice.movies.business.rules.usecase" />
@@ -84,7 +93,7 @@
       <recent name="fr.github.brice.movies" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MovieTest">
+  <component name="RunManager" selected="JUnit.MoviesFetcherTest">
     <configuration name="MovieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -128,8 +137,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MovieTest" />
         <item itemvalue="JUnit.MoviesFetcherTest" />
+        <item itemvalue="JUnit.MovieTest" />
       </list>
     </recent_temporary>
   </component>
