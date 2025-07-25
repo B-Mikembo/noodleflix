@@ -1,4 +1,4 @@
-package fr.github.brice;
+package fr.github.brice.movies;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

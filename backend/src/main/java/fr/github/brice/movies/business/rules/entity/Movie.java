@@ -1,4 +1,4 @@
 package fr.github.brice.movies.business.rules.entity;
 
-public record Movie() {
+public record Movie(String title) {
 }

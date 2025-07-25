@@ -1,6 +1,7 @@
 package fr.github.brice.movies.business.rules.usecase;
 
 import fr.github.brice.movies.business.rules.UnitTest;
+import fr.github.brice.movies.business.rules.entity.Movie;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
