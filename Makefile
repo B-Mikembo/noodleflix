@@ -6,4 +6,4 @@ test:	##	Execute all test
 
 run:	##	Run application with maven
 	@mvn clean install
-	@mvn --projects backend spring-boot:run
+	@mvn --projects backend spring-boot:run -Dspring-boot.run.arguments="--spring.profiles.active=local"

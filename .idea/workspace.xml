@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="">
+    <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="Revert &quot;feat(get-all-movies): should makes correct http request to find all&quot;&#10;&#10;This reverts commit a9d5e55499def6ff0654c5ea166b9311986c14cd.&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;backend/src/main/java/fr/github/brice/movies/gateway/TMDBClient.java&#10;#&#9;backend/src/main/java/fr/github/brice/movies/gateway/TMDBClientProperties.java&#10;#&#9;backend/src/main/resources/application.yml&#10;#&#9;backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java">
       <change beforePath="$PROJECT_DIR$/.github/workflows/2-dev-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/2-dev-deploy.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +15,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -45,19 +49,127 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Maven.backend [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "push-dev-latest-version-to-docker",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.MovieControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MoviesFetcherTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TMDBClientTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TMDBClientTest.fail.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.TMDBClientTest.shouldMakeCorrectRequest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TMDBClientTest.shouldMakesCorrectRequestToFindAll.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.backend [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;get-all-movies&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/bricemikembo/Desktop/noodleflix/backend/src/main/java/fr/github/brice&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="fr.github.brice.movies.controller" />
+      <recent name="fr.github.brice.movies.gateway" />
+      <recent name="fr.github.brice.movies.business.gateway" />
+      <recent name="fr.github.brice.movies.business.rules" />
+      <recent name="fr.github.brice.movies.business.rules.entity" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="fr.github.brice.movies" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="fr.github.brice" />
+      <recent name="fr.github.brice.movies.gateway" />
+      <recent name="fr.github.brice.movies.business.rules.entity" />
+      <recent name="fr.github.brice.movies" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MovieControllerTest">
+    <configuration name="MovieControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.github.brice.movies.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.github.brice.movies.controller" />
+      <option name="MAIN_CLASS_NAME" value="fr.github.brice.movies.controller.MovieControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoviesFetcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.github.brice.movies.business.rules.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.github.brice.movies.business.rules.usecase" />
+      <option name="MAIN_CLASS_NAME" value="fr.github.brice.movies.business.rules.usecase.MoviesFetcherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TMDBClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.github.brice.movies.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.github.brice.movies.gateway" />
+      <option name="MAIN_CLASS_NAME" value="fr.github.brice.movies.gateway.TMDBClientTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TMDBClientTest.shouldMakeCorrectRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.github.brice.movies.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.github.brice.movies.gateway" />
+      <option name="MAIN_CLASS_NAME" value="fr.github.brice.movies.gateway.TMDBClientTest" />
+      <option name="METHOD_NAME" value="shouldMakeCorrectRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TMDBClientTest.shouldMakesCorrectRequestToFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.github.brice.movies.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fr.github.brice.movies.gateway" />
+      <option name="MAIN_CLASS_NAME" value="fr.github.brice.movies.gateway.TMDBClientTest" />
+      <option name="METHOD_NAME" value="shouldMakesCorrectRequestToFindAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="noodleflix" />
       <method v="2">
@@ -69,6 +181,15 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MovieControllerTest" />
+        <item itemvalue="JUnit.MoviesFetcherTest" />
+        <item itemvalue="JUnit.TMDBClientTest" />
+        <item itemvalue="JUnit.TMDBClientTest.shouldMakeCorrectRequest" />
+        <item itemvalue="JUnit.TMDBClientTest.shouldMakesCorrectRequestToFindAll" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -79,5 +200,16 @@
       <updated>1753295952155</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/config/DomainTestConfig.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
