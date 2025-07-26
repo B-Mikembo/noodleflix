@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static fr.github.brice.movies.business.rules.MovieFixture.*;
+import static fr.github.brice.movies.MovieFixture.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @UnitTest
@@ -40,7 +40,7 @@ public class MoviesFetcherTest {
                         theDragons(),
                         theM3ganTwoDotZero(),
                         theLiloAndStitch(),
-                        theAmnesique()
+                        theDemonSlayer()
                 );
     }
 }

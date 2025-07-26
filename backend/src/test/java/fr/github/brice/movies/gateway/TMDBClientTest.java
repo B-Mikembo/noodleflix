@@ -17,6 +17,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import java.io.IOException;
 
+import static fr.github.brice.movies.MovieFixture.*;
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -39,23 +40,11 @@ class TMDBClientTest {
         properties.setBaseUrl(mockWebServer.url(baseUrl).url().toString());
         properties.setApiToken(apiToken);
         tmdbClient = new TMDBClient(WebClient.create(), properties);
-    }
-
-    @Test
-    void shouldMakeCorrectRequest() throws InterruptedException {
         mockWebServer.enqueue(
                 new MockResponse().setResponseCode(200)
                         .setHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                         .setBody(getJson("movies-response.json"))
         );
-
-        tmdbClient.findAll();
-
-        var request = mockWebServer.takeRequest();
-        assertThat(request.getMethod()).isEqualTo("GET");
-        assertThat(request.getHeader(HttpHeaders.AUTHORIZATION)).isEqualTo(format("Bearer %s", apiToken));
-        assertThat(request.getHeader(HttpHeaders.ACCEPT)).isEqualTo(MediaType.APPLICATION_JSON_VALUE);
-        assertThat(request.getPath()).isEqualTo("/discover/movie?sort_by=popularity.desc");
     }
 
     private String getJson(String path) {
@@ -66,5 +55,23 @@ class TMDBClientTest {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+    }
+
+    @Test
+    void shouldMakeCorrectRequest() throws InterruptedException {
+        tmdbClient.findAll();
+
+        var request = mockWebServer.takeRequest();
+        assertThat(request.getMethod()).isEqualTo("GET");
+        assertThat(request.getHeader(HttpHeaders.AUTHORIZATION)).isEqualTo(format("Bearer %s", apiToken));
+        assertThat(request.getHeader(HttpHeaders.ACCEPT)).isEqualTo(MediaType.APPLICATION_JSON_VALUE);
+        assertThat(request.getPath()).isEqualTo("/discover/movie?sort_by=popularity.desc");
+    }
+
+    @Test
+    void shouldReturnMoviesWhenClientFindAll() throws InterruptedException {
+        var movies = tmdbClient.findAll();
+
+        assertThat(movies).containsExactly(theDragons(), theM3ganTwoDotZero(), theLiloAndStitch(), theDemonSlayer(), theManWithNoPast());
     }
 }

@@ -31,7 +31,7 @@ public class TMDBClient implements MovieRepository {
         var baseUrl = properties.baseUrl();
         var apiToken = properties.apiToken();
 
-        webClient.get()
+        var moviesResponse = webClient.get()
                 .uri(baseUrl + "/discover/movie?sort_by=popularity.desc")
                 .header(HttpHeaders.AUTHORIZATION, format("Bearer %s", apiToken))
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
@@ -39,6 +39,6 @@ public class TMDBClient implements MovieRepository {
                 .bodyToMono(MoviesResponse.class)
                 .blockOptional()
                 .orElseThrow(IllegalStateException::new);
-        return List.of();
+        return moviesResponse.toDomain();
     }
 }

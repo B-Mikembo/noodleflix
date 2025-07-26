@@ -8,7 +8,7 @@ import java.util.List;
 
 public class InMemoryMovieRepository implements MovieRepository {
 
-    private final HashMap<Integer, Movie> entities = new HashMap<>();
+    private final HashMap<Long, Movie> entities = new HashMap<>();
 
     @Override
     public Movie save(Movie movie) {

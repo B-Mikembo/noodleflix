@@ -4,7 +4,7 @@ import fr.github.brice.movies.business.gateway.stub.InMemoryMovieRepository;
 
 import java.util.List;
 
-import static fr.github.brice.movies.business.rules.MovieFixture.*;
+import static fr.github.brice.movies.MovieFixture.*;
 
 public class MoviesFetcherContext {
     private final InMemoryMovieRepository movies = new InMemoryMovieRepository();
@@ -18,7 +18,7 @@ public class MoviesFetcherContext {
                 theDragons(),
                 theM3ganTwoDotZero(),
                 theLiloAndStitch(),
-                theAmnesique()
+                theDemonSlayer()
         ).forEach(movies::save);
     }
 
