@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClientProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/resources/movies-response.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/resources/application-test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +61,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "JUnit.MovieTest.executor": "Run",
     "JUnit.MoviesFetcherTest.executor": "Run",
-    "JUnit.TMDBClientTest.executor": "Run",
+    "JUnit.TMDBClientTest.executor": "Debug",
     "JUnit.TMDBClientTest.fail.executor": "Debug",
     "JUnit.TMDBClientTest.shouldMakesCorrectRequestToFindAll.executor": "Debug",
     "Maven.backend [package].executor": "Run",
@@ -205,5 +201,16 @@
       <updated>1753295952155</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
