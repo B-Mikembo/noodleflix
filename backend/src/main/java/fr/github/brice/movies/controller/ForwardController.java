@@ -1,9 +1,7 @@
-package fr.github.brice;
+package fr.github.brice.movies.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class ForwardController {

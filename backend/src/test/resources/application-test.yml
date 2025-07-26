@@ -1,0 +1,3 @@
+tmdb-api:
+  baseUrl: /
+  apiToken: api-token

@@ -1,0 +1,7 @@
+logging:
+  level:
+    org.springframework.web.reactive.function.client: DEBUG
+
+tmdb-api:
+  baseUrl: ${TMDB_BASE_URL}
+  apiToken: ${TMDB_API_TOKEN}
