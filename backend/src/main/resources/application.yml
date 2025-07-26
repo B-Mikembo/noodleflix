@@ -2,7 +2,3 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-
-tmdb-api:
-  baseUrl: https://api.themoviedb.org/3
-  apiKey: eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNTNhZWJhOWQ5MjBhNmExNGQ0MTliYWJhNmJiMjZkZCIsIm5iZiI6MTY3ODYxMjk5My44MzUsInN1YiI6IjY0MGQ5YTAxZTE4ZTNmMDdiNDIzMGI0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nRHkxJdRSn527HFiQhUU4jK4BI0eHlIF-OTZ2lFdelM

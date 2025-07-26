@@ -4,12 +4,14 @@ import fr.github.brice.movies.business.gateway.MovieRepository;
 import fr.github.brice.movies.business.rules.entity.Movie;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.List;
 
 import static java.lang.String.format;
 
+@Component
 public class TMDBClient implements MovieRepository {
     private final WebClient webClient;
     private final TMDBClientProperties properties;
@@ -34,7 +36,7 @@ public class TMDBClient implements MovieRepository {
                 .header(HttpHeaders.AUTHORIZATION, format("Bearer %s", apiToken))
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
                 .retrieve()
-                .bodyToMono(String.class)
+                .bodyToMono(MoviesResponse.class)
                 .blockOptional()
                 .orElseThrow(IllegalStateException::new);
         return List.of();
