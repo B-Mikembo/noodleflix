@@ -3,8 +3,8 @@ package fr.github.brice.movies.gateway;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix = "tmdb-api")
 @Component
+@ConfigurationProperties(prefix = "tmdb-api")
 public class TMDBClientProperties {
     private String baseUrl;
     private String apiToken;

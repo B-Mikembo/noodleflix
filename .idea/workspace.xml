@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="Revert &quot;feat(get-all-movies): should makes correct http request to find all&quot;&#10;&#10;This reverts commit a9d5e55499def6ff0654c5ea166b9311986c14cd.&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;backend/src/main/java/fr/github/brice/movies/gateway/TMDBClient.java&#10;#&#9;backend/src/main/java/fr/github/brice/movies/gateway/TMDBClientProperties.java&#10;#&#9;backend/src/main/resources/application.yml&#10;#&#9;backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java">
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/config/DomainTestConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/controller/MovieControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/controller/RestResourceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/rules/entity/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/business/rules/entity/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/MovieResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/MovieResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/MoviesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/MoviesResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/gateway/stub/InMemoryMovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/gateway/stub/InMemoryMovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/MovieFixture.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/MovieFixture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcherContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcherContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/business/rules/usecase/MoviesFetcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/controller/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClientProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClientProperties.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +20,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Record" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,27 +54,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;JUnit.MovieTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MoviesFetcherTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TMDBClientTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TMDBClientTest.fail.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.TMDBClientTest.shouldMakeCorrectRequest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TMDBClientTest.shouldMakesCorrectRequestToFindAll.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven.backend [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;get-all-movies&quot;,
-    &quot;last_directory_selection&quot;: &quot;/Users/bricemikembo/Desktop/noodleflix/backend/src/test/java/fr/github/brice/movies&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.MovieControllerTest.executor": "Run",
+    "JUnit.MovieTest.executor": "Run",
+    "JUnit.MoviesFetcherTest.executor": "Run",
+    "JUnit.TMDBClientTest.executor": "Run",
+    "JUnit.TMDBClientTest.fail.executor": "Debug",
+    "JUnit.TMDBClientTest.shouldMakeCorrectRequest.executor": "Run",
+    "JUnit.TMDBClientTest.shouldMakesCorrectRequestToFindAll.executor": "Debug",
+    "Maven.backend [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "get-all-movies",
+    "last_directory_selection": "/Users/bricemikembo/Desktop/noodleflix/backend/src/test/java/fr/github/brice/movies",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="fr.github.brice.movies.gateway" />
@@ -99,17 +96,17 @@
       <recent name="fr.github.brice.movies" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TMDBClientTest">
-    <configuration name="MoviesFetcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MovieControllerTest">
+    <configuration name="MovieControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.github.brice.movies.business.rules.usecase.*" />
+          <option name="PATTERN" value="fr.github.brice.movies.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="fr.github.brice.movies.business.rules.usecase" />
-      <option name="MAIN_CLASS_NAME" value="fr.github.brice.movies.business.rules.usecase.MoviesFetcherTest" />
+      <option name="PACKAGE_NAME" value="fr.github.brice.movies.controller" />
+      <option name="MAIN_CLASS_NAME" value="fr.github.brice.movies.controller.MovieControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MovieControllerTest" />
         <item itemvalue="JUnit.TMDBClientTest" />
         <item itemvalue="JUnit.TMDBClientTest.shouldMakeCorrectRequest" />
         <item itemvalue="JUnit.TMDBClientTest.shouldMakesCorrectRequestToFindAll" />
         <item itemvalue="JUnit.TMDBClientTest.fail" />
-        <item itemvalue="JUnit.MoviesFetcherTest" />
       </list>
     </recent_temporary>
   </component>
