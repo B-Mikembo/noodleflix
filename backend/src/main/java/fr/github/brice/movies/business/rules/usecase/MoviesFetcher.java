@@ -6,7 +6,7 @@ import fr.github.brice.movies.business.rules.entity.Movie;
 import java.util.List;
 
 public class MoviesFetcher {
-    private MovieRepository movieRepository;
+    private final MovieRepository movieRepository;
 
     public MoviesFetcher(MovieRepository movieRepository) {
         this.movieRepository = movieRepository;
