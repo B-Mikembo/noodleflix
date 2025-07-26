@@ -1,7 +1,7 @@
 package fr.github.brice.movies.gateway;
 
 import fr.github.brice.movies.business.gateway.MovieRepository;
-import fr.github.brice.movies.business.rules.ReplaceCamelCase;
+import fr.github.brice.movies.ReplaceCamelCase;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.BeforeEach;

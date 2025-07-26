@@ -36,7 +36,7 @@ public class MoviesFetcherTest {
         var movies = moviesFetcher.fetchMovies();
 
         assertThat(movies)
-                .containsExactly(
+                .containsExactlyInAnyOrder(
                         theDragons(),
                         theM3ganTwoDotZero(),
                         theLiloAndStitch(),

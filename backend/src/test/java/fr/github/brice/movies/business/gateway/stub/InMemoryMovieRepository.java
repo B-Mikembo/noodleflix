@@ -11,9 +11,8 @@ public class InMemoryMovieRepository implements MovieRepository {
     private final HashMap<Long, Movie> entities = new HashMap<>();
 
     @Override
-    public Movie save(Movie movie) {
+    public void save(Movie movie) {
         entities.put(movie.id(), movie);
-        return movie;
     }
 
     @Override

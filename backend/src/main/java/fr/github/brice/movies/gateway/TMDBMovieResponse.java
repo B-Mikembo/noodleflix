@@ -5,7 +5,7 @@ import fr.github.brice.movies.business.rules.entity.Movie;
 
 import java.util.List;
 
-public class MovieResponse {
+public class TMDBMovieResponse {
     private boolean adult;
     @JsonAlias("backdrop_path")
     private String backdropPath;

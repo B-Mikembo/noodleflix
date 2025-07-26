@@ -4,9 +4,9 @@ import fr.github.brice.movies.business.rules.entity.Movie;
 
 import java.util.List;
 
-public class MoviesResponse {
+public class TMDBMoviesResponse {
     private int page;
-    private List<MovieResponse> results;
+    private List<TMDBMovieResponse> results;
     private int totalPages;
     private int totalResults;
 
@@ -18,11 +18,11 @@ public class MoviesResponse {
         this.page = page;
     }
 
-    public List<MovieResponse> results() {
+    public List<TMDBMovieResponse> results() {
         return results;
     }
 
-    public void setResults(List<MovieResponse> results) {
+    public void setResults(List<TMDBMovieResponse> results) {
         this.results = results;
     }
 
@@ -44,7 +44,7 @@ public class MoviesResponse {
 
     public List<Movie> toDomain() {
         return results.stream()
-                .map(MovieResponse::toDomain)
+                .map(TMDBMovieResponse::toDomain)
                 .toList();
     }
 }

@@ -22,8 +22,7 @@ public class TMDBClient implements MovieRepository {
     }
 
     @Override
-    public Movie save(Movie movie) {
-        return null;
+    public void save(Movie movie) {
     }
 
     @Override
@@ -36,7 +35,7 @@ public class TMDBClient implements MovieRepository {
                 .header(HttpHeaders.AUTHORIZATION, format("Bearer %s", apiToken))
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
                 .retrieve()
-                .bodyToMono(MoviesResponse.class)
+                .bodyToMono(TMDBMoviesResponse.class)
                 .blockOptional()
                 .orElseThrow(IllegalStateException::new);
         return moviesResponse.toDomain();

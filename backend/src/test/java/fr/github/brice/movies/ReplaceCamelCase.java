@@ -1,4 +1,4 @@
-package fr.github.brice.movies.business.rules;
+package fr.github.brice.movies;
 
 import org.junit.jupiter.api.DisplayNameGenerator;
 

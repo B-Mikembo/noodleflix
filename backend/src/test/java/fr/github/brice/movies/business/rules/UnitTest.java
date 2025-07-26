@@ -1,5 +1,6 @@
 package fr.github.brice.movies.business.rules;
 
+import fr.github.brice.movies.ReplaceCamelCase;
 import org.junit.jupiter.api.DisplayNameGeneration;
 
 import java.lang.annotation.ElementType;
