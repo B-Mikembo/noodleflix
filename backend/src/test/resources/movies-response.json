@@ -1,0 +1,108 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/7HqLLVjdjhXS0Qoz1SgZofhkIpE.jpg",
+      "genre_ids": [
+        14,
+        10751,
+        28
+      ],
+      "id": 1087192,
+      "original_language": "en",
+      "original_title": "How to Train Your Dragon",
+      "overview": "On the rugged isle of Berk, where Vikings and dragons have been bitter enemies for generations, Hiccup stands apart, defying centuries of tradition when he befriends Toothless, a feared Night Fury dragon. Their unlikely bond reveals the true nature of dragons, challenging the very foundations of Viking society.",
+      "popularity": 829.1379,
+      "poster_path": "/41dfWUWtg1kUZcJYe6Zk6ewxzMu.jpg",
+      "release_date": "2025-06-06",
+      "title": "How to Train Your Dragon",
+      "video": false,
+      "vote_average": 8.085,
+      "vote_count": 1218
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cEQMqB3ahd4mfeUN6VGC0ouVnZZ.jpg",
+      "genre_ids": [
+        28,
+        878,
+        53
+      ],
+      "id": 1071585,
+      "original_language": "en",
+      "original_title": "M3GAN 2.0",
+      "overview": "After the underlying tech for M3GAN is stolen and misused by a powerful defense contractor to create a military-grade weapon known as Amelia, M3GAN's creator Gemma realizes that the only option is to resurrect M3GAN and give her a few upgrades, making her faster, stronger, and more lethal.",
+      "popularity": 551.8498,
+      "poster_path": "/oekamLQrwlJjRNmfaBE4llIvkir.jpg",
+      "release_date": "2025-06-25",
+      "title": "M3GAN 2.0",
+      "video": false,
+      "vote_average": 7.642,
+      "vote_count": 475
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7Zx3wDG5bBtcfk8lcnCWDOLM4Y4.jpg",
+      "genre_ids": [
+        10751,
+        878,
+        35,
+        12
+      ],
+      "id": 552524,
+      "original_language": "en",
+      "original_title": "Lilo & Stitch",
+      "overview": "The wildly funny and touching story of a lonely Hawaiian girl and the fugitive alien who helps to mend her broken family.",
+      "popularity": 585.6713,
+      "poster_path": "/c32TsWLES7kL1uy6fF03V67AIYX.jpg",
+      "release_date": "2025-05-17",
+      "title": "Lilo & Stitch",
+      "video": false,
+      "vote_average": 7.311,
+      "vote_count": 1062
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1RgPyOhN4DRs225BGTlHJqCudII.jpg",
+      "genre_ids": [
+        16,
+        28,
+        14,
+        53
+      ],
+      "id": 1311031,
+      "original_language": "ja",
+      "original_title": "劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来",
+      "overview": "As the Demon Slayer Corps members and Hashira engaged in a group strength training program, the Hashira Training, in preparation for the forthcoming battle against the demons, Muzan Kibutsuji appears at the Ubuyashiki Mansion. With the head of the Demon Corps in danger, Tanjiro and the Hashira rush to the headquarters but are plunged into a deep descent to a mysterious space by the hands of Muzan Kibutsuji.  The destination of where Tanjiro and Demon Slayer Corps have fallen is the demons' stronghold – the Infinity Castle. And so, the battleground is set as the final battle between the Demon Slayer Corps and the demons ignites.",
+      "popularity": 628.6854,
+      "poster_path": "/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg",
+      "release_date": "2025-07-18",
+      "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+      "video": false,
+      "vote_average": 6.827,
+      "vote_count": 26
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8or4S9BPhkeYK0vlKsPFee4JVWI.jpg",
+      "genre_ids": [
+        28,
+        18
+      ],
+      "id": 1315986,
+      "original_language": "en",
+      "original_title": "Man with No Past",
+      "overview": "Waking up in an unfamiliar city, a man with no memory must confront the mysteries of his own identity. However, his desperate search to uncover the past pits him against a powerful enemy, leading to a showdown that ultimately reveals the truth.",
+      "popularity": 342.1738,
+      "poster_path": "/eWHvROuznSzcxBAAkzX1X0Rmzoe.jpg",
+      "release_date": "2025-01-13",
+      "title": "Man with No Past",
+      "video": false,
+      "vote_average": 6.703,
+      "vote_count": 32
+    }
+  ],
+  "total_pages": 51600,
+  "total_results": 1031986
+}

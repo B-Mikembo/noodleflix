@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/controller/MovieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/MovieResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/MoviesResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClientProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/fr/github/brice/movies/gateway/TMDBClientProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/resources/application-test.yml" afterDir="false" />
-    </list>
+    <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="Revert &quot;feat(get-all-movies): should makes correct http request to find all&quot;&#10;&#10;This reverts commit a9d5e55499def6ff0654c5ea166b9311986c14cd.&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;backend/src/main/java/fr/github/brice/movies/gateway/TMDBClient.java&#10;#&#9;backend/src/main/java/fr/github/brice/movies/gateway/TMDBClientProperties.java&#10;#&#9;backend/src/main/resources/application.yml&#10;#&#9;backend/src/test/java/fr/github/brice/movies/gateway/TMDBClientTest.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,11 +36,6 @@
     &quot;accountId&quot;: &quot;7e127ecc-ced7-492e-b547-7acd1751c344&quot;
   }
 }</component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="JUnit" name="MovieTest" />
-    </enabled-run-configurations>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -66,26 +47,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "JUnit.MovieTest.executor": "Run",
-    "JUnit.MoviesFetcherTest.executor": "Run",
-    "JUnit.TMDBClientTest.executor": "Run",
-    "JUnit.TMDBClientTest.fail.executor": "Debug",
-    "JUnit.TMDBClientTest.shouldMakesCorrectRequestToFindAll.executor": "Debug",
-    "Maven.backend [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "get-all-movies",
-    "last_directory_selection": "/Users/bricemikembo/Desktop/noodleflix/backend/src/test/java/fr/github/brice/movies",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.MovieTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MoviesFetcherTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TMDBClientTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TMDBClientTest.fail.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.TMDBClientTest.shouldMakesCorrectRequestToFindAll.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.backend [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;get-all-movies&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/bricemikembo/Desktop/noodleflix/backend/src/test/java/fr/github/brice/movies&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="fr.github.brice.movies.gateway" />
