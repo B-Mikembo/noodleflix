@@ -4,7 +4,7 @@ import { MovieFixture } from '../entity/movie.fixture';
 
 export class FetchMoviesUsecaseContext {
   private readonly movies: InMemoryMovieRepository =
-    new InMemoryMovieRepository();
+    new InMemoryMovieRepository([]);
 
   constructor() {
     this.populateRepositoryWithSomeMovies();
@@ -22,5 +22,9 @@ export class FetchMoviesUsecaseContext {
 
   buildUsecase(): FetchMoviesUsecase {
     return new FetchMoviesUsecase(this.movies);
+  }
+
+  withNoMovies() {
+    this.movies.clear();
   }
 }

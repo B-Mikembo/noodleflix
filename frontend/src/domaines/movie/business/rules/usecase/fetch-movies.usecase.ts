@@ -4,6 +4,6 @@ export class FetchMoviesUsecase {
   constructor(private readonly movieRepository: MovieRepository) {}
 
   async execute() {
-    return [];
+    return this.movieRepository.fetchMovies();
   }
 }
