@@ -1,3 +1,4 @@
-tmdb-api:
-  baseUrl: /
-  apiToken: api-token
+tmdb:
+  api:
+    baseUrl: /
+    apiToken: api-token
