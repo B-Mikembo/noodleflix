@@ -1,10 +1,10 @@
 export class Movie {
   constructor(
-    private id: number,
-    private title: string,
-    private voteAverage: number,
-    private posterPath: string,
-    private releaseDate: string,
-    private originalLanguage: string
+    public readonly id: number,
+    public readonly title: string,
+    public readonly voteAverage: number,
+    public readonly posterPath: string,
+    public readonly releaseDate: string,
+    public readonly originalLanguage: string
   ) {}
 }

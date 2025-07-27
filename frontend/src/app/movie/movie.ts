@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MovieModel } from './movie-model';
 import { NgClass, NgStyle } from '@angular/common';
+import { Movie } from '../../domaines/movie/business/rules/entity/movie';
 
 @Component({
   selector: 'app-movie',
@@ -8,8 +9,8 @@ import { NgClass, NgStyle } from '@angular/common';
   templateUrl: './movie.html',
   styleUrl: './movie.css',
 })
-export class Movie implements OnInit {
-  @Input() movie!: MovieModel;
+export class MovieComponent implements OnInit {
+  @Input() movie!: Movie;
 
   ngOnInit(): void {
     
