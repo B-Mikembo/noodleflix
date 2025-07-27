@@ -1,11 +1,4 @@
-export interface Movie {
-  id: number;
-  title: string;
-  voteAverage: number;
-  posterPath: string;
-  releaseDate: string;
-  originalLanguage: string;
-}
+import { Movie } from "../rules/entity/movie";
 
 export interface MovieRepository {
   fetchMovies(): Promise<Movie[]>;
