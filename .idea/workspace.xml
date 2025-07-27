@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="Merge branch 'develop' of github.com:B-Mikembo/noodleflix into develop&#10;&#10;# Conflicts:&#10;#&#9;.github/workflows/2-dev-deploy.yml&#10;#&#9;.idea/workspace.xml&#10;#&#9;Makefile&#10;#&#9;backend/pom.xml&#10;#&#9;backend/src/main/java/fr/github/brice/controller/BackendController.java">
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/2-dev-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/2-dev-deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3f0a4cf1-86a1-49c4-bf06-073c18ccdd26" name="Changes" comment="Merge branch 'develop' of github.com:B-Mikembo/noodleflix into develop&#10;&#10;# Conflicts:&#10;#&#9;.github/workflows/2-dev-deploy.yml&#10;#&#9;.idea/workspace.xml&#10;#&#9;Makefile&#10;#&#9;backend/pom.xml&#10;#&#9;backend/src/main/java/fr/github/brice/controller/BackendController.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +64,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "fix-dev-deploy",
+    "git-widget-placeholder": "remove-deploy-job",
     "last_directory_selection": "/Users/bricemikembo/Desktop/noodleflix/backend/src/main/java/fr/github/brice",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
