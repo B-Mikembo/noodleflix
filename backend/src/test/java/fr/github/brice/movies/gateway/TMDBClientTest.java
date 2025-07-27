@@ -26,9 +26,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DisplayName("TMDB client test")
 @DisplayNameGeneration(ReplaceCamelCase.class)
 class TMDBClientTest {
-    @Value("${tmdb-api.baseUrl}")
+    @Value("${tmdb.api.baseUrl}")
     private String baseUrl;
-    @Value("${tmdb-api.apiToken}")
+    @Value("${tmdb.api.apiToken}")
     private String apiToken;
     private MockWebServer mockWebServer;
     private MovieRepository tmdbClient;
