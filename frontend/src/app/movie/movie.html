@@ -1,0 +1,23 @@
+<div class="movie-card">
+  <img
+    [src]="
+      movie.posterPath
+        ? 'https://image.tmdb.org/t/p/w500' + movie.posterPath
+        : '/no-movie.png'
+    "
+    [alt]="movie.title"
+  />
+  <div class="mt-4">
+    <h3>{{ movie.title }}</h3>
+    <div class="content">
+      <div class="rating">
+        <img src="star.svg" alt="Star Icon" />
+        <p>{{ movie.voteAverage ? movie.voteAverage.toFixed(1) : "N/A" }}</p>
+      </div>
+      <span>•</span>
+      <p class="lang">{{ movie.originalLanguage }}</p>
+      <span>•</span>
+      <p class="year">{{ movie.releaseDate ? movie.releaseDate.split("-")[0] : "N/A" }}</p>
+    </div>
+  </div>
+</div>
