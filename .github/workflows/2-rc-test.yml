@@ -1,0 +1,26 @@
+name: "run tests"
+
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+    branches: [ main ]
+
+concurrency:
+  group: ci-test-rc-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rc-test:
+    if: contains(toJSON(github.head_ref), 'release/') || contains(toJSON(github.head_ref), 'hotfix/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4.5.0
+        with:
+          distribution: 'liberica'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Run tests
+        run: mvn clean verify --no-transfer-progress
