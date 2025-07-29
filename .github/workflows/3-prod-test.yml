@@ -64,8 +64,9 @@ jobs:
           echo "RELEASE_VERSION=${RELEASE_VERSION}" >> $GITHUB_OUTPUT
 
   prod-create-release:
-    needs: [ prod-deploy ]
+    needs: [ prod-pre-release ]
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       # 1. Setup
       - uses: actions/create-github-app-token@v1
@@ -88,8 +89,9 @@ jobs:
           gh release create $RELEASE_VERSION --title "$RELEASE_VERSION" --generate-notes
 
   prod-create-pull-request:
-    needs: [ prod-deploy ]
+    needs: [ prod-pre-release ]
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       # 1. Setup
       - uses: actions/create-github-app-token@v1
