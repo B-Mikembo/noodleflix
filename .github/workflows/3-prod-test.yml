@@ -66,6 +66,7 @@ jobs:
   prod-create-release:
     needs: [ prod-pre-release ]
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       # 1. Setup
       - uses: actions/create-github-app-token@v1
@@ -90,6 +91,7 @@ jobs:
   prod-create-pull-request:
     needs: [ prod-pre-release ]
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       # 1. Setup
       - uses: actions/create-github-app-token@v1
