@@ -10,3 +10,6 @@ run:	##	Run application with maven
 
 release:
 	./scripts/create_release.sh
+
+hotfix: ##	Create hotfix
+	./scripts/create_hotfix.sh
