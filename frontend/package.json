@@ -25,7 +25,7 @@
     "@angular/core": "^20.1.0",
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
-    "@angular/router": "^20.1.0",
+    "@angular/router": "^20.1.4",
     "@tailwindcss/postcss": "^4.1.11",
     "postcss": "^8.5.6",
     "redaxios": "^0.5.1",
