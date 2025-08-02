@@ -22,10 +22,6 @@ public class TMDBClient implements MovieRepository {
     }
 
     @Override
-    public void save(Movie movie) {
-    }
-
-    @Override
     public List<Movie> findAll() {
         var baseUrl = properties.baseUrl();
         var apiToken = properties.apiToken();
@@ -39,5 +35,10 @@ public class TMDBClient implements MovieRepository {
                 .blockOptional()
                 .orElseThrow(IllegalStateException::new);
         return moviesResponse.toDomain();
+    }
+
+    @Override
+    public List<Movie> search(String query) {
+        return List.of();
     }
 }

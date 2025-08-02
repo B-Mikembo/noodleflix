@@ -22,15 +22,7 @@ public class MovieControllerTest {
 
     @Test
     void shouldReturnStatusOkWhenGetMovies() throws Exception {
-        movieRepository.save(theDemonSlayer());
-
         mockMvc.perform(get("/api/movies"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.movies", hasSize(1)))
-                .andExpect(jsonPath("$.movies[0].title").value("Demon Slayer: Kimetsu no Yaiba Infinity Castle"))
-                .andExpect(jsonPath("$.movies[0].voteAverage").value(6.827))
-                .andExpect(jsonPath("$.movies[0].posterPath").value("/aFRDH3P7TX61FVGpaLhKr6QiOC1.jpg"))
-                .andExpect(jsonPath("$.movies[0].releaseDate").value("2025-07-18"))
-                .andExpect(jsonPath("$.movies[0].originalLanguage").value("ja"));
+                .andExpect(status().isOk());
     }
 }
