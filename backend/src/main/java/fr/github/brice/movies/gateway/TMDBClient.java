@@ -43,8 +43,9 @@ public class TMDBClient implements MovieRepository {
     @Override
     public List<Movie> search(String query) {
         var encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
+        String uri = properties.baseUrl() + "/search/movie?query=" + encodedQuery;
         return webClient.get()
-                .uri(properties.baseUrl() + "/search/movie?query=" + encodedQuery)
+                .uri(uri)
                 .header(HttpHeaders.AUTHORIZATION, format("Bearer %s", properties.apiToken()))
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
                 .retrieve()

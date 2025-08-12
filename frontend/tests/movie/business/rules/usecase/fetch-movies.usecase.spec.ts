@@ -1,7 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { InMemoryMovieRepository } from '../../../movie.repository.stub';
-import { FetchMoviesUsecase } from '../../../../../src/domaines/movie/business/rules/usecase/fetch-movieRepository.usecase';
-import { FetchMoviesUsecaseContext } from './fetch-movieRepository.usecase.context';
+import { FetchMoviesUsecaseContext } from './fetch-movies.usecase.context';
 import { MovieFixture } from '../entity/movie.fixture';
 
 describe('Fetch Movies test', () => {

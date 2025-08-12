@@ -3,8 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { MovieModel } from './movie/movie-model';
 import { MovieComponent } from './movie/movie';
 import { Movie } from '../domaines/movie/business/rules/entity/movie';
-import { FetchMoviesUsecase } from '../domaines/movie/business/rules/usecase/fetch-movieRepository.usecase';
-import { MoviesRepositoryAxios } from '../domaines/movie/gateway/movieRepository.repository.axios';
+import { FetchMoviesUsecase } from '../domaines/movie/business/rules/usecase/fetch-movies.usecase';
+import { MoviesRepositoryAxios } from '../domaines/movie/gateway/movies.repository.axios';
 
 @Component({
   selector: 'app-root',

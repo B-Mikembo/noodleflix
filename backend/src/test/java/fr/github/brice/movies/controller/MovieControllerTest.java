@@ -6,10 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static fr.github.brice.movies.MovieFixture.theDemonSlayer;
-import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RestResourceTest
@@ -23,6 +20,12 @@ public class MovieControllerTest {
     @Test
     void shouldReturnStatusOkWhenGetMovies() throws Exception {
         mockMvc.perform(get("/api/movies"))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    void shouldReceiveStatusOkWhenSearchMovies() throws Exception {
+        mockMvc.perform(get("/api/search/movies?query=Demon+Slayer"))
                 .andExpect(status().isOk());
     }
 }

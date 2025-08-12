@@ -1,4 +1,4 @@
-import { FetchMoviesUsecase } from '../../../../../src/domaines/movie/business/rules/usecase/fetch-movieRepository.usecase';
+import { FetchMoviesUsecase } from '../../../../../src/domaines/movie/business/rules/usecase/fetch-movies.usecase';
 import { InMemoryMovieRepository } from '../../../movie.repository.stub';
 import { MovieFixture } from '../entity/movie.fixture';
 
