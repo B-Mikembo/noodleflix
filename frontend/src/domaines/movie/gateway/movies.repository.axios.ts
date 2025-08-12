@@ -12,20 +12,20 @@ interface MovieApiModel {
 }
 
 export interface MoviesApiModel {
-  movies: MovieApiModel[];
+  movieRepository: MovieApiModel[];
 }
 
 export class MoviesRepositoryAxios implements MovieRepository {
   async fetchMovies(): Promise<Movie[]> {
     const axios = AxiosFactory.getAxios();
-    const response = await axios.get<MoviesApiModel>('/movies');
+    const response = await axios.get<MoviesApiModel>('/movieRepository');
     return this.transformMoviesApiModelToMovies(response.data);
   }
 
   private transformMoviesApiModelToMovies(
     moviesApiModel: MoviesApiModel
   ): Movie[] {
-    return moviesApiModel.movies.map(
+    return moviesApiModel.movieRepository.map(
       (movie) =>
         new Movie(
           movie.id,

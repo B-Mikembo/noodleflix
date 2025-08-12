@@ -3,17 +3,17 @@ import { MovieRepository } from '../../src/domaines/movie/business/gateway/movie
 import { Movie } from '../../src/domaines/movie/business/rules/entity/movie';
 
 export class InMemoryMovieRepository implements MovieRepository {
-  constructor(private movies: Movie[]) {}
+  constructor(private movieRepository: Movie[]) {}
 
   async fetchMovies(): Promise<Movie[]> {
-    return Promise.resolve(this.movies);
+    return Promise.resolve(this.movieRepository);
   }
 
   async save(movie: Movie): Promise<void> {
-    this.movies.push(movie);
+    this.movieRepository.push(movie);
   }
 
   async clear(): Promise<void> {
-    this.movies = [];
+    this.movieRepository = [];
   }
 }

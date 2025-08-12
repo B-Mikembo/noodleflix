@@ -9,16 +9,16 @@ import java.util.List;
 
 @Component
 public class SearchMoviesUseCase {
-    private final MovieRepository movies;
+    private final MovieRepository movieRepository;
 
-    public SearchMoviesUseCase(MovieRepository movies) {
-        this.movies = movies;
+    public SearchMoviesUseCase(MovieRepository movieRepository) {
+        this.movieRepository = movieRepository;
     }
 
     public List<Movie> execute(String query) {
         if (query.isEmpty()) {
             return Collections.emptyList();
         }
-        return movies.search(query);
+        return movieRepository.search(query);
     }
 }

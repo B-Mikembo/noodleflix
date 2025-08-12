@@ -1,7 +1,7 @@
 package fr.github.brice.movies.gateway;
 
-import fr.github.brice.movies.business.gateway.MovieRepository;
 import fr.github.brice.movies.ReplaceCamelCase;
+import fr.github.brice.movies.business.gateway.MovieRepository;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,6 +20,7 @@ import java.io.IOException;
 import static fr.github.brice.movies.MovieFixture.*;
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -63,7 +64,7 @@ class TMDBClientTest {
 
         var request = mockWebServer.takeRequest();
         assertThat(request.getMethod()).isEqualTo("GET");
-        assertThat(request.getHeader(HttpHeaders.AUTHORIZATION)).isEqualTo(format("Bearer %s", apiToken));
+        assertThat(request.getHeader(AUTHORIZATION)).isEqualTo(format("Bearer %s", apiToken));
         assertThat(request.getHeader(HttpHeaders.ACCEPT)).isEqualTo(MediaType.APPLICATION_JSON_VALUE);
         assertThat(request.getPath()).isEqualTo("/discover/movie?sort_by=popularity.desc");
     }
@@ -73,5 +74,16 @@ class TMDBClientTest {
         var movies = tmdbClient.findAll();
 
         assertThat(movies).containsExactly(theDragons(), theM3ganTwoDotZero(), theLiloAndStitch(), theDemonSlayer(), theManWithNoPast());
+    }
+
+    @Test
+    void shouldMakeCorrectSearchMoviesRequest() throws InterruptedException {
+        tmdbClient.search("Demon Slayer");
+
+        var request = mockWebServer.takeRequest();
+        assertThat(request.getMethod()).isEqualTo("GET");
+        assertThat(request.getHeader(AUTHORIZATION)).isEqualTo(format("Bearer %s", apiToken));
+        assertThat(request.getHeader(HttpHeaders.ACCEPT)).isEqualTo(MediaType.APPLICATION_JSON_VALUE);
+        assertThat(request.getPath()).isEqualTo("/search/movie?query=Demon+Slayer");
     }
 }

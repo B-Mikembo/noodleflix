@@ -3,8 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { MovieModel } from './movie/movie-model';
 import { MovieComponent } from './movie/movie';
 import { Movie } from '../domaines/movie/business/rules/entity/movie';
-import { FetchMoviesUsecase } from '../domaines/movie/business/rules/usecase/fetch-movies.usecase';
-import { MoviesRepositoryAxios } from '../domaines/movie/gateway/movies.repository.axios';
+import { FetchMoviesUsecase } from '../domaines/movie/business/rules/usecase/fetch-movieRepository.usecase';
+import { MoviesRepositoryAxios } from '../domaines/movie/gateway/movieRepository.repository.axios';
 
 @Component({
   selector: 'app-root',
@@ -15,13 +15,13 @@ import { MoviesRepositoryAxios } from '../domaines/movie/gateway/movies.reposito
 export class App implements OnInit {
   protected readonly title = signal('frontend');
 
-  movies!: Movie[];
+  movieRepository!: Movie[];
 
   async ngOnInit(): Promise<void> {
     const fetchMoviesUsecase = new FetchMoviesUsecase(
       new MoviesRepositoryAxios()
     );
 
-    this.movies = await fetchMoviesUsecase.execute();
+    this.movieRepository = await fetchMoviesUsecase.execute();
   }
 }

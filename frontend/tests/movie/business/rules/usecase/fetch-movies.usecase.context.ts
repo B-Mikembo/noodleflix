@@ -1,9 +1,9 @@
-import { FetchMoviesUsecase } from '../../../../../src/domaines/movie/business/rules/usecase/fetch-movies.usecase';
+import { FetchMoviesUsecase } from '../../../../../src/domaines/movie/business/rules/usecase/fetch-movieRepository.usecase';
 import { InMemoryMovieRepository } from '../../../movie.repository.stub';
 import { MovieFixture } from '../entity/movie.fixture';
 
 export class FetchMoviesUsecaseContext {
-  private readonly movies: InMemoryMovieRepository =
+  private readonly movieRepository: InMemoryMovieRepository =
     new InMemoryMovieRepository([]);
 
   constructor() {
@@ -17,14 +17,14 @@ export class FetchMoviesUsecaseContext {
       MovieFixture.theLiloAndStitch(),
       MovieFixture.theDemonSlayer(),
       MovieFixture.theManWithNoPast(),
-    ].forEach((movie) => this.movies.save(movie));
+    ].forEach((movie) => this.movieRepository.save(movie));
   }
 
   buildUsecase(): FetchMoviesUsecase {
-    return new FetchMoviesUsecase(this.movies);
+    return new FetchMoviesUsecase(this.movieRepository);
   }
 
   withNoMovies() {
-    this.movies.clear();
+    this.movieRepository.clear();
   }
 }
