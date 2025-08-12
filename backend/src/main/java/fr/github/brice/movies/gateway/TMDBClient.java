@@ -7,6 +7,9 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.net.URI;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import static java.lang.String.format;
@@ -19,10 +22,6 @@ public class TMDBClient implements MovieRepository {
     public TMDBClient(WebClient webClient, TMDBClientProperties properties) {
         this.webClient = webClient;
         this.properties = properties;
-    }
-
-    @Override
-    public void save(Movie movie) {
     }
 
     @Override
@@ -39,5 +38,20 @@ public class TMDBClient implements MovieRepository {
                 .blockOptional()
                 .orElseThrow(IllegalStateException::new);
         return moviesResponse.toDomain();
+    }
+
+    @Override
+    public List<Movie> search(String query) {
+        var encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
+        String uri = properties.baseUrl() + "/search/movie?query=" + encodedQuery;
+        return webClient.get()
+                .uri(uri)
+                .header(HttpHeaders.AUTHORIZATION, format("Bearer %s", properties.apiToken()))
+                .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
+                .retrieve()
+                .bodyToMono(TMDBMoviesResponse.class)
+                .blockOptional()
+                .orElseThrow(IllegalStateException::new)
+                .toDomain();
     }
 }

@@ -9,9 +9,9 @@
       </h1>
     </header>
     <section class="all-movies">
-      <h2>All movies</h2>
+      <h2>All Movies</h2>
       <ul>
-        @for(movie of movies; track movie.id) {
+        @for(movie of movieRepository; track movie.id) {
         <app-movie [movie]="movie"></app-movie>
         }
       </ul>

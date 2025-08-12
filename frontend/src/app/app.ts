@@ -15,13 +15,13 @@ import { MoviesRepositoryAxios } from '../domaines/movie/gateway/movies.reposito
 export class App implements OnInit {
   protected readonly title = signal('frontend');
 
-  movies!: Movie[];
+  movieRepository!: Movie[];
 
   async ngOnInit(): Promise<void> {
     const fetchMoviesUsecase = new FetchMoviesUsecase(
       new MoviesRepositoryAxios()
     );
 
-    this.movies = await fetchMoviesUsecase.execute();
+    this.movieRepository = await fetchMoviesUsecase.execute();
   }
 }

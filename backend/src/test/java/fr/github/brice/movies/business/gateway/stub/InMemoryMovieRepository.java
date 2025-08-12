@@ -10,7 +10,6 @@ public class InMemoryMovieRepository implements MovieRepository {
 
     private final HashMap<Long, Movie> entities = new HashMap<>();
 
-    @Override
     public void save(Movie movie) {
         entities.put(movie.id(), movie);
     }
@@ -18,6 +17,13 @@ public class InMemoryMovieRepository implements MovieRepository {
     @Override
     public List<Movie> findAll() {
         return entities.values().stream().toList();
+    }
+
+    @Override
+    public List<Movie> search(String query) {
+        return entities.values().stream()
+                .filter(movie -> movie.title().toLowerCase().contains(query.toLowerCase()))
+                .toList();
     }
 
     public void removeAll() {
