@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { SearchMoviesUsecaseContext } from './search-movies.usecase.context';
+import { MovieFixture } from '../entity/movie.fixture';
 
 describe('Search Movies test', () => {
   let context: SearchMoviesUsecaseContext;
@@ -13,8 +14,16 @@ describe('Search Movies test', () => {
 
     const searchMoviesUsecase = context.buildUsecase();
 
-    const movies = await searchMoviesUsecase.execute("query");
-    
+    const movies = await searchMoviesUsecase.execute('query');
+
     expect(movies).toStrictEqual([]);
-  })
+  });
+
+  it('should return movies corresponding with search when search movies with corresponding search term', async () => {
+    const searchMoviesUsecase = context.buildUsecase();
+
+    const movies = await searchMoviesUsecase.execute('demon');
+
+    expect(movies).toStrictEqual([MovieFixture.theDemonSlayer()]);
+  });
 });

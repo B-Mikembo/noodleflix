@@ -4,6 +4,6 @@ export class SearchMoviesUsecase {
   constructor(private readonly movies: MovieRepository) {}
 
   async execute(searchTerm: string) {
-    return []
+    return this.movies.searchMovies(searchTerm);
   }
 }
