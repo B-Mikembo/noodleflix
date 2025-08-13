@@ -5,16 +5,15 @@ import { MovieComponent } from './movie/movie';
 import { Movie } from '../domaines/movie/business/rules/entity/movie';
 import { FetchMoviesUsecase } from '../domaines/movie/business/rules/usecase/fetch-movies.usecase';
 import { MoviesRepositoryAxios } from '../domaines/movie/gateway/movies.repository.axios';
+import { SearchComponent } from './search/search';
 
 @Component({
   selector: 'app-root',
-  imports: [MovieComponent],
+  imports: [MovieComponent, SearchComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App implements OnInit {
-  protected readonly title = signal('frontend');
-
   movieRepository!: Movie[];
 
   async ngOnInit(): Promise<void> {
