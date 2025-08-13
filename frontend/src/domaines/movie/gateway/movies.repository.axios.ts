@@ -22,6 +22,14 @@ export class MoviesRepositoryAxios implements MovieRepository {
     return this.transformMoviesApiModelToMovies(response.data);
   }
 
+  async searchMovies(searchTerm: string): Promise<Movie[]> {
+    const axios = AxiosFactory.getAxios();
+    const response = await axios.get<MoviesApiModel>('/search/movies', {
+      params: { query: searchTerm },
+    });
+    return this.transformMoviesApiModelToMovies(response.data);
+  }
+
   private transformMoviesApiModelToMovies(
     moviesApiModel: MoviesApiModel
   ): Movie[] {
